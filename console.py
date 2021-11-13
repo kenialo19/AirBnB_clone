@@ -20,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
     """This class inherits the public class Cmd, to be used as the base
     class for the present interactive shell."""
 
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
         """Quit command to exit the program."""
