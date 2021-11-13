@@ -97,8 +97,6 @@ $
 
 <p><br /></p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p00ES-5K4C8" frameborder="0" allowfullscreen></iframe>
-
 </div>
 
 
