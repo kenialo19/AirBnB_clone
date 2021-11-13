@@ -1,4 +1,22 @@
- <div class="well clean" id="project-description">
+ 
+        <h2>Concepts</h2>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>
+        <em>For this project, students are expected to look at this concept:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="/concepts/66">Python packages</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="well clean" id="project-description">
   <p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20211112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211112T224652Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f203e22f28af206ed0602b91cb0a44a67bdbb5342780e45e9447fdce644afac8" alt="" style="" /></p>
 
   # 0x00. AirBnB clone - The console 
@@ -91,9 +109,15 @@ $
 
 <p>All tests should also pass in non-interactive mode: <code>$ echo &quot;python3 -m unittest discover tests&quot; | bash</code></p>
 
-<p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20211112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211112T205916Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=167e0f4f769a9b9aa73e85571048366a79e04ea0a420a8bc954f82f48990ef3e" alt="" style="" /></p>
- </div>
- 
+<p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20211112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211112T224652Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8571367a14ded5f506a3c82fe47fa5f05157c195f75056432a843ccd6a26b0aa" alt="" style="" /></p>
+
+<p><br /></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p00ES-5K4C8" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+
 ### Authors 
 * Kenia López | [GitHub](https://github.com/kenialo19) |
 * Eylen Sánchez Chica | [GitHub](https://github.com/EylenS) |
