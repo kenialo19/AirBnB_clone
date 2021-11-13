@@ -1,25 +1,9 @@
- 
-        <h2>Concepts</h2>
-
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <p>
-        <em>For this project, students are expected to look at this concept:</em>
-      </p>
-
-      <ul>
-          <li>
-            <a href="/concepts/66">Python packages</a>
-          </li>
-      </ul>
-    </div>
-  </div>
 
 
-      <div class="well clean" id="project-description">
+  <div class="well clean" id="project-description">
   <p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20211112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211112T224652Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f203e22f28af206ed0602b91cb0a44a67bdbb5342780e45e9447fdce644afac8" alt="" style="" /></p>
 
-  # 0x00. AirBnB clone - The console 
+  # 0x00. AirBnB clone - The console (#hbnb)
 
 <h2>Background Context 📚</h2>
 
