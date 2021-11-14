@@ -36,16 +36,19 @@ class BaseModel:
 
     def __str__(self):
         """Prints representation of the BaseModel class."""
+
         return "[{}] ({}) {}".\
             format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """Updates the public instance attribute with the current datetime."""
+
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
         """Returns a dict. containing all keys/values of the instance."""
+
         dic = self.__dict__.copy()
         dic["__class__"] = self.__class__.__name__
         dic["created_at"] = dic["created_at"].isoformat()
