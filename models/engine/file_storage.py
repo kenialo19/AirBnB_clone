@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """This module contains a class that stores information
 about instances."""
+
+
 import json
 from os import path
 from models.base_model import BaseModel
