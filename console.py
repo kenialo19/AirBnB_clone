@@ -40,16 +40,16 @@ class HBNBCommand(cmd.Cmd):
 
         if not arg:
             print('** class name missing **')
-            return
-
-        token = arg.split(' ')
-        if token[0] in classList:
-            instance = classList[token[0]]()
-            instance.save()
-            print(instance.id)
-        else:
+        elif arg not in classList:
             print("** class doesn't exist **")
-            return
+        else:
+            token = arg.split(' ')
+            if token[0] in classList:
+                instance = classList[token[0]]()
+                instance.save()
+                print(instance.id)
+            else:
+                print("** class doesn't exist **")
 
     def do_show(self, arg):
         """Prints the string representation of an instance based on
@@ -57,35 +57,31 @@ class HBNBCommand(cmd.Cmd):
 
         if not arg:
             print('** class name missing **')
-            return
 
         token = arg.split(' ')
-        if token[0] in classList:
-            if len(token) == 1:
-                print('** instance id missing **')
-                return
-            elif len(token) == 2:
-                key = token[0] + '.' + token[1]
-                if key in models.storage.all():
-                    print(models.storage.all()[key])
-                else:
-                    print('** no instance found **')
-                return
-        else:
+        if token[0] not in classList:
             print("** class doesn't exist **")
-            return
+        elif len(token) < 2:
+            print('** instance id missing **')
+        elif len(token) >= 3:
+            print('** no instance found **')
+        else:
+            key = token[0] + '.' + token[1]
+            if key in models.storage.all():
+                print(models.storage.all()[key])
+            else:
+                print('** no instance found **')
 
     def do_destroy(self, arg):
         """Deletes an instance based on the class name and id."""
 
         if not arg:
             print('** class name missing **')
-            return
 
         token = arg.split(' ')
-        if arg[0] not in HBNBCommand.classList:
+        if token[0] not in classList:
             print("** class doesn't exist **")
-        elif len(token) == 1:
+        elif len(token) < 2:
                 print('** instance id missing **')
         else:
             key = "{}.{}".format(token[0], token[1])
