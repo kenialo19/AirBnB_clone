@@ -7,9 +7,6 @@ from datetime import datetime
 import models
 
 
-date_time = "%Y-%m-%dT%H:%M:%S.%f"
-
-
 class BaseModel:
     """Parent class which defines all common attributes or
     methods for other classes."""
@@ -19,6 +16,7 @@ class BaseModel:
         where *args won’t be used, kwargs is not empty, otherwise
         create id and created_at (new instance)"""
 
+        date_time = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs and kwargs != {}:
             for key, value in kwargs.items():
                 if key == "created_at":
