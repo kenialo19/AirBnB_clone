@@ -4,7 +4,7 @@
 
 import uuid
 from datetime import datetime
-from models import (storage)
+from __init__ import (storage)
 
 
 date_time = "%Y-%m-%dT%H:%M:%S.%f"
