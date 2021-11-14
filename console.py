@@ -83,6 +83,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         elif len(token) < 2:
                 print('** instance id missing **')
+        elif len(token) >= 3:
+            print('** no instance found **')
         else:
             key = "{}.{}".format(token[0], token[1])
             if key not in storage.all():
@@ -96,16 +98,22 @@ class HBNBCommand(cmd.Cmd):
         not on the class name."""
 
         new_list = []
-        arg = arg.split(' ')
-        if arg == []:
-            for key, isinstance in storage.all().items():
-                new_list.append(isinstance.__str__())
+        token = arg.split(' ')
+        all_instance = storage.all()
+        if not arg:
+            for v in all_instance.values():
+                new_list.append(v.__str__())
+                print(v)
             print(new_list)
-        elif arg[0] in classList:
-            for key, isinstance in storage.all().items():
-                if isinstance.__class__.__name__ == arg[0]:
-                    new_list.append(isinstance.__str__())
-            print(new_list)
+        elif token[0] in classList:
+            if len(token) >= 2:
+                print("** class doesn't exist**")
+            else:
+                for v in all_instance.values():
+                    if v.__class__.__name__ == token[0]:
+                        new_list.append(v.__str__())
+                        print(v)
+                print(new_list)
         else:
             print("** class doesn't exist**")
 
