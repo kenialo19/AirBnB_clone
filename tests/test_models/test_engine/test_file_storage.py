@@ -24,12 +24,12 @@ class test_storage(unittest.TestCase):
 
     def test_save(self):
         """"""
-
-
-
+        pass
 
     def test_reload(self):
         """"""
+        pass
+    
 
 
     
