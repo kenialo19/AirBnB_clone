@@ -108,6 +108,7 @@ class HBNBCommand(cmd.Cmd):
             print(new_list)
         elif token[0] in classList:
             if len(token) >= 2:
+                print("** class doesn't exist **")
                 return
             else:
                 for v in all_instance.values():
@@ -115,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
                         new_list.append(v.__str__())
                 print(new_list)
         else:
-            print("** class doesn't exist**")
+            print("** class doesn't exist **")
             return
 
     def do_update(self, arg):
