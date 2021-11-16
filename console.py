@@ -57,6 +57,7 @@ class HBNBCommand(cmd.Cmd):
 
         if not arg:
             print('** class name missing **')
+            return
 
         token = arg.split(' ')
         if token[0] not in classList:
