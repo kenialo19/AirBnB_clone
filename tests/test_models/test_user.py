@@ -3,7 +3,7 @@
 
 
 import unittest
-from AirBnB_clone.models import user
+from models.user import User
 from models.base_model import BaseModel
 import os
 
@@ -25,9 +25,9 @@ class test_user(unittest.TestCase):
 
     def test_instantiation(self):
         """"test if user subclass basemodel"""
-        user_1 = user()
+        user_1 = User()
         self.assertEqual(str(type(user_1)), "<class 'models.user.user'>")
-        self.assertIsInstance(user_1, user)
+        self.assertIsInstance(user_1, User)
         self.assertTrue(issubclass(type(user_1), BaseModel))
 
     def test_atributes(self):
