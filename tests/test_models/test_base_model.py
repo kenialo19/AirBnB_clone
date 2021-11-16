@@ -26,7 +26,7 @@ class TestBasemodel(unittest.TestCase):
         model = BaseModel()
         model_1 = BaseModel()
         self.assertNotEqual(model.id, model_1.id)
-    
+
     def test_save(self):
         """check if the updated_at attribute (date) is updated
         for the same object with the current date. the same object
@@ -36,9 +36,9 @@ class TestBasemodel(unittest.TestCase):
         model_2.save()
         update_2 = model_2.updated_at
         self.assertNotEqual(update_1, update_2)
-    
+
     def test_to_dict(self):
-        """check if to_dict returns a dictionary, if it adds a class with the object's 
+        """check if to_dict returns a dictionary, if it adds a class with the object's
         class name, and if updated_at and updated_at return a dictionary.
         with the object's class name, and if updated_at and
         created_at are converted to string object in ISO format."""
@@ -55,6 +55,13 @@ class TestBasemodel(unittest.TestCase):
                 self.assertIsInstance(value, str)
             if key == "updated_at":
                 self.assertIsInstance(value, str)
+
+    def test_save(self):
+        """Tests if info has been saved to file."""
+        model_2 = BaseModel()
+        model_2.save()
+        with open("file.json", "r") as f:
+            self.assertIn(model_2.id, f.read())
 
 if __name__ == '__main__':
     unittest.main()
