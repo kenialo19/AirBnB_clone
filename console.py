@@ -106,7 +106,7 @@ class HBNBCommand(cmd.Cmd):
             print(new_list)
         elif token[0] in classList:
             if len(token) >= 2:
-                print("** class doesn't exist**")
+                print("** class doesn't exist **")
             else:
                 for v in all_instance.values():
                     if v.__class__.__name__ == token[0]:
