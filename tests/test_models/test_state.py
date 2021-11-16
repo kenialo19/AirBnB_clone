@@ -3,6 +3,7 @@
 import unittest
 from models.state import State
 from models.base_model import BaseModel
+import os
 
 
 class TestPlace(unittest.TestCase):
@@ -13,7 +14,16 @@ class TestPlace(unittest.TestCase):
 
         self.state_1 = State()
         self.state_2 = State()
+        self.state_2.name = "Risaralda"
         self.state_2.name = "Antioquia"
+
+    def tearDown(self):
+        """Tears down the testing environment."""
+
+        del self.state_1
+        del self.state_2
+        if os.path.exists("file.json"):
+            os.remove("file.json")
 
     def test_new_instance(self):
         """Checks that new instance was created."""
@@ -25,3 +35,9 @@ class TestPlace(unittest.TestCase):
         """Review inherits from BaseModel."""
 
         self.assertTrue(issubclass(State, BaseModel))
+
+    def test_attr(self):
+        """Checks that new instance has attributes."""
+
+        self.assertIn("name", self.state_2.__dict__)
+        self.assertEqual(self.state_2.name, "Antioquia")
