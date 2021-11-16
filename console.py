@@ -116,6 +116,7 @@ class HBNBCommand(cmd.Cmd):
                 print(new_list)
         else:
             print("** class doesn't exist**")
+            return
 
     def do_update(self, arg):
         """Updates an instance based on the class name and id by adding or
